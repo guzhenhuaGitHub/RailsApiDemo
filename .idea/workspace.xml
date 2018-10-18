@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1117d030-c4b1-45b6-8d31-ed41c098885d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/item.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/item.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/todo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/todo.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/item_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/item_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/todo_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/todo_spec.rb" afterDir="false" />
-    </list>
+    <list default="true" id="1117d030-c4b1-45b6-8d31-ed41c098885d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -25,10 +18,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/models/todo_spec.rb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/items_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -78,6 +71,12 @@
               <item name="RailsApiDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="RailsApiDemo" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RailsApiDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RailsApiDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -95,6 +94,12 @@
               <item name="RailsApiDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="RailsApiDemo" type="462c0819:PsiDirectoryNode" />
               <item name="spec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RailsApiDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RailsApiDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="spec" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RailsApiDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -266,12 +271,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539847434280</updated>
-      <workItem from="1539847436450" duration="1794000" />
+      <workItem from="1539847436450" duration="2091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1794000" />
+    <option name="totallyTimeSpent" value="2091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="808" extended-state="0" />
@@ -369,8 +374,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/todo_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/items_controller_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/todos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/items_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>

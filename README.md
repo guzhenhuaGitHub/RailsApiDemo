@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+---
+
+This demo is learning from [here](https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-one)
