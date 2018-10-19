@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Items", type: :request do
+RSpec.describe 'Items', type: :request do
   # Initialize the test data
-  let! (:todo) { create :todo }
-  let! (:items) { create_list :item, 20, todo_id: todo.id }
+  let!(:todo) { create :todo }
+  let!(:items) { create_list :item, 20, todo_id: todo.id }
   let(:todo_id) { todo.id }
   let(:id) { items.first.id }
 
@@ -12,7 +14,6 @@ RSpec.describe "Items", type: :request do
     before { get "/todos/#{todo_id}/items" }
 
     context 'when todo exists' do
-
       it 'returns status code 200' do
         expect(response).to have_http_status 200
       end
@@ -30,7 +31,7 @@ RSpec.describe "Items", type: :request do
       end
 
       it 'returns a not found message' do
-        expect(response.body).to match /Couldn't find Todo/
+        expect(response.body).to match(/Couldn't find Todo/)
       end
     end
   end
@@ -44,7 +45,7 @@ RSpec.describe "Items", type: :request do
         expect(response).to have_http_status 200
       end
 
-      it "returns the item" do
+      it 'returns the item' do
         expect(json['id']).to eq id
       end
     end
@@ -57,7 +58,7 @@ RSpec.describe "Items", type: :request do
       end
 
       it 'returns a not found message' do
-        expect(response.body).to match /Couldn't find Item/
+        expect(response.body).to match(/Couldn't find Item/)
       end
     end
   end
@@ -82,7 +83,7 @@ RSpec.describe "Items", type: :request do
       end
 
       it 'returns a failure message' do
-        expect(response.body).to match /Validation failed: Name can't be blank/
+        expect(response.body).to match(/Validation failed: Name can't be blank/)
       end
     end
   end
@@ -100,7 +101,7 @@ RSpec.describe "Items", type: :request do
 
       it 'updates the item' do
         updated_item = Item.find id
-        expect(updated_item.name).to match /Mozart/
+        expect(updated_item.name).to match(/Mozart/)
       end
     end
 
@@ -112,7 +113,7 @@ RSpec.describe "Items", type: :request do
       end
 
       it 'returns a not found message' do
-        expect(response.body).to match /Couldn't find Item/
+        expect(response.body).to match(/Couldn't find Item/)
       end
     end
   end

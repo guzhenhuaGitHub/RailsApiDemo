@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class ItemsController < ApplicationController
   before_action :set_todo
-  before_action :set_todo_item, only: [:show, :update, :destroy]
+  before_action :set_todo_item, only: %i[show update destroy]
 
   # GET /todos/:todo_id/items
   def index
@@ -32,12 +34,9 @@ class ItemsController < ApplicationController
 
   private
 
-  private
-
   def item_params
     params.permit :name, :id
   end
-
 
   def set_todo
     @todo = Todo.find params[:todo_id]
