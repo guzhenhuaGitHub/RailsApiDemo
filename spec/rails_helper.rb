@@ -84,4 +84,11 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+end
+
+Dir[Rails.root.join('spec/support/*.rb')].each(&method(:require))
+
+RSpec.configure do |config|
+  config.include RequestSpecHelper, type: :request
 end
