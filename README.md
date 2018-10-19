@@ -25,4 +25,7 @@ Things you may want to cover:
 
 ---
 
-This demo is learning from [here](https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-one)
+This demo is learning from **Build a RESTful JSON API With Rails 5**
+- [Part One](https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-one)
+- [Part Two](https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-two)
+- [Part Three](https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-three)
