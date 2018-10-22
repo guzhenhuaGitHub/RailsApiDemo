@@ -11,5 +11,4 @@ Style/MixinUsage:
 Naming/UncommunicativeMethodParamName:
   MinNameLength: 1
 Style/Documentation:
-  Exclude:
-    - 'db/migrate/*.rb'
+  Enabled: false
