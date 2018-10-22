@@ -15,13 +15,13 @@ RSpec.describe 'Todos', type: :request do
     # update request with headers
     before { get '/todos', params: {}, headers: headers }
 
-    it 'returns todos' do
+    it 'should returns todos' do
       # Note 'json' is a custom helper to parse JSON responses
       expect(json).not_to be_empty
       expect(json.size).to eq(10)
     end
 
-    it 'returns status code 200' do
+    it 'should returns status code 200' do
       expect(response).to have_http_status(200)
     end
   end
@@ -31,12 +31,12 @@ RSpec.describe 'Todos', type: :request do
     before { get "/todos/#{todo_id}", params: {}, headers: headers }
 
     context 'when the record exists' do
-      it 'returns the todo' do
+      it 'should returns the todo' do
         expect(json).not_to be_empty
         expect(json['id']).to eq(todo_id)
       end
 
-      it 'returns status code 200' do
+      it 'should returns status code 200' do
         expect(response).to have_http_status(200)
       end
     end
@@ -44,11 +44,11 @@ RSpec.describe 'Todos', type: :request do
     context 'when the record does not exists' do
       let(:todo_id) { 100 }
 
-      it 'returns status code 404' do
+      it 'should returns status code 404' do
         expect(response).to have_http_status(404)
       end
 
-      it 'returns a not found message' do
+      it 'should returns a not found message' do
         expect(response.body).to match(/Couldn't find Todo/)
       end
     end
@@ -64,11 +64,11 @@ RSpec.describe 'Todos', type: :request do
     context 'when the request is valid' do
       before { post '/todos', params: valid_attributes, headers: headers }
 
-      it 'creates a todo' do
+      it 'should creates a todo' do
         expect(json['title']).to eq('Learn Elm')
       end
 
-      it 'returns status code 201' do
+      it 'should returns status code 201' do
         expect(response).to have_http_status(201)
       end
     end
@@ -77,11 +77,11 @@ RSpec.describe 'Todos', type: :request do
       let(:invalid_attributes) { { title: nil }.to_json }
       before { post '/todos', params: invalid_attributes, headers: headers }
 
-      it 'returns status code 422' do
+      it 'should returns status code 422' do
         expect(response).to have_http_status 422
       end
 
-      it 'returns a validation failure message' do
+      it 'should returns a validation failure message' do
         expect(json['message'])
           .to match(/Validation failed: Title can't be blank/)
       end
@@ -95,11 +95,11 @@ RSpec.describe 'Todos', type: :request do
     context 'when the record exists' do
       before { put "/todos/#{todo_id}", params: valid_attributes, headers: headers }
 
-      it 'updates the record' do
+      it 'should updates the record' do
         expect(response.body).to be_empty
       end
 
-      it 'returns status code 204' do
+      it 'should returns status code 204' do
         expect(response).to have_http_status 204
       end
     end
@@ -109,7 +109,7 @@ RSpec.describe 'Todos', type: :request do
   describe 'DELETE /todos/:id' do
     before { delete "/todos/#{todo_id}", params: {}, headers: headers }
 
-    it 'returns status code 204' do
+    it 'should returns status code 204' do
       expect(response).to have_http_status 204
     end
   end

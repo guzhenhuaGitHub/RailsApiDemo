@@ -16,15 +16,15 @@ RSpec.describe 'Users API', type: :request do
         post '/signup', params: valid_attributes.to_json, headers: headers
       end
 
-      it 'creates a new user' do
+      it 'should creates a new user' do
         expect(response).to have_http_status 201
       end
 
-      it 'returns success message' do
+      it 'should returns success message' do
         expect(json['message']).to match(/Account created successfully/)
       end
 
-      it 'returns an authentication token' do
+      it 'should returns an authentication token' do
         expect(json['auth_token']).not_to be_nil
       end
     end
@@ -32,11 +32,11 @@ RSpec.describe 'Users API', type: :request do
     context 'when invalid request' do
       before { post '/signup', params: {}, headers: headers }
 
-      it 'does not create a new user' do
+      it 'should does not create a new user' do
         expect(response).to have_http_status 422
       end
 
-      it 'returns failure message' do
+      it 'should returns failure message' do
         keys = ['Password', 'Name', 'Email', 'Password digest']
         regex = /Validation failed: #{keys.map { |key| "#{key} can't be blank" }.join(', ')}/
         expect(json['message']).to match(regex)

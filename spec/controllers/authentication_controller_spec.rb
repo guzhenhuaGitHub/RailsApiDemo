@@ -33,7 +33,7 @@ RSpec.describe AuthenticationController, type: :controller do
         post :authenticate, params: valid_credentials
       end
 
-      it 'returns an authentication token' do
+      it 'should returns an authentication token' do
         expect(json['auth_token']).not_to be_nil
       end
     end
@@ -45,7 +45,7 @@ RSpec.describe AuthenticationController, type: :controller do
         post :authenticate, params: invalid_credentials
       end
 
-      it 'returns a failure message' do
+      it 'should returns a failure message' do
         expect(json['message']).to match(/Invalid credentials/)
       end
     end
