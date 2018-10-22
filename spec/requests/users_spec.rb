@@ -37,8 +37,9 @@ RSpec.describe 'Users API', type: :request do
       end
 
       it 'returns failure message' do
-        expect(json['message'])
-          .to match(/Validation failed: Password can't be blank, Name can't be blank, Email can't be blank, Password digest can't be blank/)
+        keys = ['Password', 'Name', 'Email', 'Password digest']
+        regex = /Validation failed: #{keys.map { |key| "#{key} can't be blank" }.join(', ')}/
+        expect(json['message']).to match(regex)
       end
     end
   end

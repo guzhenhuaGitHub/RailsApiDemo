@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# the API of Authentication
 class AuthenticationController < ApplicationController
   skip_before_action :authorize_request, only: :authenticate
 

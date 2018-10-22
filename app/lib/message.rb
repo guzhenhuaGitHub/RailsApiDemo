@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Error Messages
 class Message
   def self.not_found(record = 'record')
     "Sorry, #{record} not found."

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Controller Spec Helper
 module ControllerSpecHelper
   # generate tokens from user id
   def token_generator(user_id)

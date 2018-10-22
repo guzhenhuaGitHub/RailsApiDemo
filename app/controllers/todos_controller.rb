@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# The API of Todos
 class TodosController < ApplicationController
   before_action :set_todo, only: %i[show update destroy]
 

@@ -1,0 +1,15 @@
+Rails:
+  Enabled: true
+Rails/InverseOf:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/BlockLength:
+  Enabled: false
+Style/MixinUsage:
+  Enabled: false
+Naming/UncommunicativeMethodParamName:
+  MinNameLength: 1
+Style/Documentation:
+  Exclude:
+    - 'db/migrate/*.rb'

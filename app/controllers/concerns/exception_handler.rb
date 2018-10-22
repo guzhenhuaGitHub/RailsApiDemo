@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# handler of exceptions
 module ExceptionHandler
   # provides the more graceful `included` method
   extend ActiveSupport::Concern
